@@ -63,10 +63,15 @@ O agente é uma única pasta com o arquivo `SKILL.md`.
 
 Funciona melhor com: ferramenta de subagentes (para rodar as lentes em paralelo), navegador (para ler o perfil e a Biblioteca de Anúncios; o Instagram exige login para abrir posts) e um conector de documentos e de planilhas para o relatório e o histórico.
 
+## Conector com a API do Instagram
+
+A pasta `conector-meta/` tem um conector MCP somente leitura que liga o Claude ao seu app da Meta: métricas privadas das contas dos clientes e da agência (alcance, views, salvamentos, compartilhamentos, tempo de exibição, seguidores ganhos e perdidos, demografia) e dados públicos de concorrentes via Business Discovery. Com ele a auditoria sai com confiança alta. Instalação em `conector-meta/README.md`.
+
 ## Estrutura
 
 ```
 SKILL.md                 o agente
+conector-meta/           conector MCP para a API do Instagram (Cloudflare Workers)
 templates/historico.csv  cabeçalho da planilha de histórico
 templates/relatorio.md   esqueleto das 20 seções do relatório
 docs/metodologia.md      fontes e premissas das lentes (revalidar a cada trimestre)
